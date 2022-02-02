@@ -1,0 +1,210 @@
+Augmented assignment and shared references:
+
+>>> L = [1, 2]
+>>> M = L # L and M reference the same object
+>>> L = L + [3, 4] # Concatenation makes a new object
+>>> L, M # Changes L but not M
+([1, 2, 3, 4], [1, 2])
+>>> L = [1, 2]
+>>> M = L
+>>> L += [3, 4] # But += really means extend
+>>> L, M # M sees the in-place change too!
+([1, 2, 3, 4], [1, 2, 3, 4])
+
+
+When we use augmented assignment to extend a list, we can forget these details—for
+example, Python automatically calls the quicker extend method instead of using the
+slower concatenation operation implied by +:
+>>> L += [9, 10] # Mapped to L.extend([9, 10])
+>>> L
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+
+=================================
+L = [1,2,3,4]
+>>> L = L.append(4) # But append returns None, not L
+>>> print(L) # So we lose our list!
+None
+
+This doesn’t quite work, though. Calling an in-place change operation such as append,
+sort, or reverse on a list always changes the list in-place, but these methods do not
+return the list they have changed; instead, they return the None object. 
+
+=================================
+break, continue, pass, and the Loop else
+
+break
+Jumps out of the closest enclosing loop (past the entire loop statement)
+continue
+Jumps to the top of the closest enclosing loop (to the loop’s header line)
+pass
+Does nothing at all: it’s an empty statement placeholder
+Loop else block
+Runs if and only if the loop is exited normally (i.e., without hitting a break)
+
+General Loop Format:
+while <test1>:
+ <statements1>
+ if <test2>: break # Exit loop now, skip else
+ if <test3>: continue # Go to top of loop now, to test1
+else:
+ <statements2> # Run if we didn't hit a 'break'
+
+
+Tuple assignment in for loops:
+
+>>> T = [(1, 2), (3, 4), (5, 6)]
+>>> for (a, b) in T: # Tuple assignment at work
+... print(a, b)
+
+>>> D = {'a': 1, 'b': 2, 'c': 3}
+>>> for key in D:
+... print(key, '=>', D[key]) 
+
+>>> list(D.items())
+[('a', 1), ('c', 3), ('b', 2)]
+>>> for (key, value) in D.items():
+... print(key, '=>', value) # Iterate over both keys and values
+...
+a => 1
+c => 3
+b => 2
+
+
+>>> for key in tests: # For all keys
+... 	if key in items: # Let Python check for a match
+... 		print(key, "was found")
+... 	else:
+... 		print(key, "not found!")
+...
+(4, 5) was found
+3.14 not found!
+In general, it’s a good idea to let Python do as much of the work as possible (as in this
+solution) for the sake of brevity and performance.
+
+===============================
+
+ range and Slices:
+
+>>> S = 'abcdefghijk'
+>>> list(range(0, len(S), 2))
+[0, 2, 4, 6, 8, 10]
+>>> for i in range(0, len(S), 2): print(S[i], end=' ')
+...
+a c e g i k
+
+Still, this is probably not the ideal best-practice technique in Python today. If you really
+want to skip items in a sequence, the extended three-limit form of the slice expression
+
+>>> S = 'abcdefghijk'
+>>> for c in S[::2]: print(c, end=' ')
+...
+a c e g i k
+=======================================
+Parallel Traversals: zip and map:
+
+>>> L1 = [1,2,3,4]
+>>> L2 = [5,6,7,8]
+
+>>> zip(L1, L2)
+<zip object at 0x026523C8>
+>>> list(zip(L1, L2)) # list() required in 3.0, not 2.6
+[(1, 5), (2, 6), (3, 7), (4, 8)]
+
+>>> S1 = 'abc'
+>>> S2 = 'xyz123'
+>>>
+>>> list(zip(S1, S2))
+[('a', 'x'), ('b', 'y'), ('c', 'z')]
+
+
+=====================================
+Generating Both Offsets and Items: enumerate:
+
+>>> S = 'spam'
+>>> for (offset, item) in enumerate(S):
+... print(item, 'appears at offset', offset)
+...
+s appears at offset 0
+p appears at offset 1
+a appears at offset 2
+m appears at offset 3
+
+************************************************
+
+Function Basics:
+
+ a function is a device that groups a set of statements so they can be run
+more than once in a program. 
+
+• def creates an object and assigns it to a name. When Python reaches and runs
+a def statement, it generates a new function object and assigns it to the function’s
+name. As with all assignments, the function name becomes a reference to the function object.
+
+def <name>(arg1, arg2,... argN):
+ <statements>
+
+
+• lambda creates an object but returns it as a result
+• return sends a result object back to the caller
+• yield sends a result object back to the caller, but remembers where it left off
+• Arguments are passed by assignment (object reference).
+
+>>> [x for x in s1 if x in s2]
+['S', 'A', 'M']
+
+
+This enclosing scope lookup works even if the enclosing function has already returned.
+For example, the following code defines a function that makes and returns another
+function:
+def f1():
+  X = 88
+  def f2():
+     print(X) # Remembers X in enclosing def scope
+  return f2 # Return f2 but don't call it
+action = f1() # Make, return function
+action() # Call it now: prints 88
+
+In this code, the call to action is really running the function we named f2 when f1 ran.
+f2 remembers the enclosing scope’s X in f1, even though f1 is no longer active.
+
+LAMBDA:  it’s an expression that generates a new function to be called later, much like a def statement
+Like a def, a lambda expression introduces a new local scope for the function it creates.
+
+
+The nonlocal Statement:
+nested functions can reference variables
+in an enclosing function’s scope, even if that function has already returned. It turns out
+that, as of Python 3.0, we can also change such enclosing scope variables, as long as we
+declare them in nonlocal statements. With this statement, nested defs can have both
+read and write access to names in enclosing functions.
+
+First, unlike the global statement, nonlocal names really must have previously been assigned in an enclosing def’s scope when a
+nonlocal is evaluated, or else you’ll get an error—you cannot create them dynamically
+by assigning them anew in the enclosing scope:
+
+Second, nonlocal restricts the scope lookup to just enclosing defs; nonlocals are not
+looked up in the enclosing module’s global scope or the built-in scope outside all
+defs, even if they are already there:
+
+Using nonlocal for changes:
+Now, under 3.0, if we declare state in the tester scope as nonlocal within nested, we
+get to change it inside the nested function, too. This works even though tester has
+returned and exited by the time we call the returned nested function through the name
+F:
+>>> def tester(start):
+... 	state = start # Each call gets its own state
+... 	def nested(label):
+... 		nonlocal state # Remembers state in enclosing scope
+... 		print(label, state)
+... 		state += 1 # Allowed to change it if nonlocal
+... 	return nested
+...
+>>> F = tester(0)
+>>> F('spam') # Increments state on each call
+spam 0
+>>> F('ham')
+ham 1
+>>> F('eggs')
+eggs 2
+

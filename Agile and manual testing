@@ -1,0 +1,286 @@
+An agile software development model works in small iterations. 
+You test the software in parallel as it is getting built. The developers build a small 
+functionality according to the requirements. The testers test it and get customer feedback, 
+which drives future development.
+- its an iterative sw devlopment methodology where reqmnts keep changing as per the customers need.
+- test team receiives frequent code changes from the Development team for testing 
+an application.
+
+Agile manifesto:
+-----------------
+- individuals and interactions over processes and tools; 
+- working software over comprehensive documentation; 
+- customer collaboration over contract negotiation; 
+- responding to change over following a plan.
+
+Q. How is agile testing is diffrent from other methodology?
+A: In Agile, testing is not a phase like other traditional models.
+its an activity parallel to dev in the agile. the time slot for testing is less
+compared to other models. The testing team works on a small feature in agile.
+
+Q: when do you use agile scrum?
+A: - when the client is not so clear on requirements
+- when the client expects quick releases.
+- when the client doesnt give all the requirements at a time
+
+Q: what is product packlog and sprint backlog?
+product backlog:> is a repository where the list of PB items are stored and maintained by 
+product owner. These are prioritized by the product owner.
+
+Sprint backlog: group of user stories which scrum team agreed to do during the current sprint.
+its the subset of product backlog.
+
+
+
+
+
+scrum ceremonies are:
+======================
+
+Sprint Planning
+Daily Scrum
+Sprint Review
+Sprint Retrospective
+
+Sprint Planning:
+This scrum meeting happens at the beginning of a new scrum sprint and is designed 
+for the Product Owner and Development Team to meet and review the prioritized Product Backlog.
+The Product Owner is responsible for having the Product Backlog ready for review before 
+Sprint Planning begins
+User stories can be broken up into smaller tasks & assigned during sprint planning so that 
+everyone knows what they’re held accountable to.
+
+Daily stand-up:
+Purpose: Stand-up is designed to quickly inform everyone of what's going on across the team. 
+It's not a detailed status meeting
+
+What did I complete yesterday?
+What will I work on today?
+Am I blocked by anything?
+
+Sprint Review:
+The Sprint Review is the scrum ceremony where all work completed during the sprint can be showcased 
+to the stakeholders. This allows stakeholders to see things sooner than later and inspect or adapt the
+product as it emerges.
+
+Sprint Retrospective:
+Discuss what went well throughout the sprint and what went wrong. So, the goal of the Sprint Retrospective is to 
+gather rapid feedback for continuous improvement in terms of process.
+
+What went well over the last sprint?
+What didn’t go so well?
+What could we do differently to improve?
+
+
+
+***************************************************************
+What is API testing?
+API testing ensures that the APIs that the software is using work as expected. The tester 
+writes code that makes an API request to the server that provides the API, provides the 
+required inputs, collects the output from the response, and matches the actual output 
+with the expected output.
+
+API testing primarily concerns the business logic of the software that’s exposing the API. 
+It does not involve the look and feel, accessibility, or usability of the software. 
+API testing can be automated to make it repeatable and reproducible each time they run. 
+
+What is Test-Driven-Development?
+In TDD, a developer working on a feature first writes a failing test, then writes just enough
+code to make that test pass. Once they have a passing test, they add another failing test 
+and then write just enough code to pass the failing test. This cycle repeats until the 
+developer has the fully working feature.
+
+What are the different types of severity you can assign to a bug?
+Though it varies depending on the size and structure of the software development teams, 
+typically, a bug can be assigned the following types of severities, going from low to high:
+
+Low
+User Interface bugs
+Accessibility issues
+
+Medium
+Leaky abstractions
+Software hangs
+Users unable to perform a specific action
+Boundary conditions
+
+High
+Crashing under high load
+Business logic and/or calculation errors
+Any user action that causes the software to crash
+Exposing sensitive user data
+Security problems
+Loss of data
+
+38. When will you choose automated testing over manual testing?
+Benefits of automated testing over manual testing  
+
+When test cases need to be run repeatedly for a long duration of time.  
+When one needs to perform regression testing, performance testing, or load testing. 
+When one wants to record the testing process 
+When one has less time to complete the testing phase 
+When tests are needed to be executed in a standard runtime environment 
+When tests include repetitive steps 
+When there are multiple and quick deployments for the product, manual becomes very time taking and redundant
+
+39. When will you choose manual testing over automated testing?
+Benefits of manual testing over automated testing:
+
+When test cases need to be run for a short duration of time (once or twice). 
+When one needs to perform ad-hoc testing, exploratory testing, or usability testing 
+When one wants to ensure the user-friendliness of an application 
+When flexibility is required 
+When one wants to better handle the complex scenarios 
+
+40. Name some methods that can be used in code coverage.
+There are several methods that can be used in code coverage includes: 
+
+Statement Coverage 
+Decision Coverage 
+Branch Coverage 
+Toggle Coverage
+
+49. What do you mean by Test Deliverables?
+Before Testing Phase 
+
+Test plans document. 
+Test cases documents 
+Test Design specifications.
+
+During Testing Phase 
+
+Test Scripts 
+Simulators. 
+Test Data 
+Test Traceability Matrix 
+Error logs and execution logs
+
+After testing Phase 
+
+Test Results/reports 
+Defect Report 
+Installation/ Test procedures guidelines 
+Release notes
+
+11. What is coverage and what are the different types of coverage techniques?
+The parameter used in software testing to describe the extent to which the source code 
+is tested is known as coverage. There are three basic types of coverage techniques and 
+they are:
+
+Statement coverage: It ensures that each line of source code has been executed and tested.
+Decision coverage: It assures that every decision (true/false) in the source code has been executed and tested.
+Path coverage: Here we ensure that every possible route through a given part of the code is executed and tested.
+
+4. What are the advantages of manual testing?
+Manual testing’s strengths are:
+
+It’s cheaper
+You get visual feedback that’s accurate and quick
+It’s ideal for testing minor changes
+It’s perfect for ad hoc testing
+Testers don’t have to know anything about automation tools
+It’s great for testing UI’s
+
+Manual testing’s weaknesses are:
+
+Susceptible to human error
+Some tasks may be difficult to accomplish manually, requiring more time to complete
+The cost adds up, so it’s more expensive in the long run
+You cannot record the manual testing process, so it’s hard to replicate it
+
+6. What kind of skills are needed for someone to become a software tester? 
+Software testers need skills such as:
+
+Problem-solving skills
+Excellent written and verbal communication skills
+Detail-oriented
+Able to handle the pressure
+Can work solo or as a team member equally well
+Organizational skills
+Related technical skills
+
+7. Explain what is SDLC.
+This is an acronym for Software Development Life Cycle and encompasses all of the stages 
+of software development, including requirement gathering and analysis, designing, coding, 
+testing, deployment, and maintenance.
+
+8. What types of manual testing are there? Break them down.
+Manual testing is broken down into:
+
+Black Box
+White Box
+Integration
+Unit
+System
+Acceptance
+
+9. What is black box testing, and what are the various techniques?
+Software testers employ black-box testing when they do not know the internal architecture or code structure. The techniques are:
+
+Equivalence Partitioning
+Boundary value analysis
+Cause-effect graphing
+10. What is white box testing and its various techniques?
+Unlike black-box testing, white box involves analyzing the system’s internal architecture and/or its implementation, in addition to its source code quality. It’s techniques are:
+
+Statement Coverage
+Decision Coverage
+
+11. Explain the difference between alpha testing and beta testing.
+Alpha testing is at the developer’s site before release. Potential clients conduct beta testing at their websites.
+
+12. What’s the difference between verification and validation?
+Verification evaluates the software at the development phase, ascertaining whether or not a product meets the expected requirements. On the other hand, validation evaluates the software after the development phase, making it sure it meets the requirements of the customer.
+
+13. What’s a testbed?
+It’s not furniture. A testbed is an environment used for testing an application, including the hardware as well as any software needed to run the program to be tested.
+
+14. What is Sanity testing?
+Sanity testing is testing done at the release level to test the main functionalities. It’s also considered an aspect of regression testing.
+
+Got a question for us? Please mention it in the comments section on this Manual Testing Interview Questions article and we will get back to you.
+
+15. When should developers implement configuration management procedures?
+This should be done during test planning.
+
+16. List the four different test levels
+The four levels are:
+
+Unit/component/program/module testing
+Integration testing
+System testing
+Acceptance testing
+
+17. What’s the difference between a bug and a defect?
+A bug is a fault in the software that’s detected during testing time, while a defect is a variance between expected results and actual results, detected by the developer after the product goes live.
+
+18. What about the difference between an error and a failure?
+If a program can’t run or be compiled during development, it’s an error. If an end-user discovers an issue with the software, it’s a failure.
+
+19. What’s GUI testing?
+This tests the interface between the software and the end-user. Short for Graphics User Interface.
+
+20. When should testing end?
+There are a few criteria for ending testing:
+
+The bug rate has fallen below an agreed-upon level
+The testing or release deadlines have arrived
+The testing budget is out of funds
+A certain percentage of test cases have passed
+The alpha or beta testing periods have ended
+Code, functionality, or requirements coverage have been met at a declared point
+
+Test Lead qualities:
+=======================
+Have Business Knowledge And Technical Skills
+1. Test Leads must have a good hold over the project road-maps, overall organizational goals, stakeholders, 
+and customer requirements
+2.  A Test Lead must possess the needed skills to be able to guide the testers with any 
+tools, environment, systems, etc. and provide solutions to overcome any problems that they 
+might be facing. In critical times, they must also undertake some work on themselves to 
+ease the load of the team.
+- Effort Estimation And Effective Assignment Of Work
+- Try Not To Over Commit
+- Encourage collaboration with development:
+
+

@@ -1,0 +1,40 @@
+About the Dial Plan:
+=====================
+The dial plan is responsible for instructing the Cisco Unified Communications Manager system about how to route calls. When you configure a dial plan, you define such rules as:
+
+the type of calls that are allowed
+
+the preferred path that the system uses to place a call, as well as alternate paths
+
+how extensions are dialed
+
+how called and calling numbers are presented
+
+Call Admission Control:
+===========================
+Voice quality can degrade when too many active calls exist on a link and the amount of bandwidth is oversubscribed. 
+Call admission control regulates voice quality by limiting the number of calls that can be 
+active at the same time on a particular link. Call admission control does not guarantee a 
+particular level of audio quality on the link, but it does allow you to regulate the amount 
+of bandwidth that active calls on the link consume.
+
+Call admission control operates by rejecting a call for bandwidth and policy reasons. 
+When a call is rejected due to call admission control, the phone of the called party does not 
+ring, and the caller receives a busy tone. The caller also receives a message on their phone, 
+such as “Not enough bandwidth.” If you have enabled automated alternate routing (AAR), 
+call admission control automatically diverts calls to alternate public switched telephone 
+network (PSTN) routes when WAN bandwidth is not available
+
+
+CTX:
+The Cisco TelePresence Exchange System is an integrated video service-creation platform that enables 
+service providers and strategic partners to offer secure cloud-based managed and hosted 
+Cisco TelePresence and business video services
+The Cisco TelePresence Exchange System manages the media resources and the call processing that 
+inter-company telepresence services require
+- Controls the reservation and allocation of media resources.
+
+Unified Contact Center Express
+Cisco Unified Contact Center Express (Unified CCX) is an IP-based Automated Call Distribution (ACD) system 
+that queues and distributes incoming calls to Unified CCX agents, who can be groups of Unified CM users for 
+Unified CM integration.
