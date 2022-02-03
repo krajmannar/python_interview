@@ -315,7 +315,14 @@ optimized test efforts and team size that is reqrd to do testing.
 - identify the test metrics.
 - prepare the test  plan, get it reviewd and signed off by stake holders.
 - 
-- 
+How can you contribute to the automation?
+- create and maintain the required test automation framework. create new or Enhance any existing FW.
+and become owner for that test automation FW.
+- review the test automation created by the testers and make sure that they are in line with test automatiion goals.
+and the test automation is efficent andt usefull in the testing process.
+- own and maintain the test automation suites. as more and more automation releases are tested, its important that 
+test autoamtion suite is upto date.
+
 
 
 
