@@ -51,6 +51,7 @@ Daily Scrum
 Sprint Review
 Sprint Retrospective
 
+
 Sprint Planning:
 This scrum meeting happens at the beginning of a new scrum sprint and is designed 
 for the Product Owner and Development Team to meet and review the prioritized Product Backlog.
@@ -291,5 +292,31 @@ ease the load of the team.
 - Effort Estimation And Effective Assignment Of Work
 - Try Not To Over Commit
 - Encourage collaboration with development:
+
+Test Lead questiions:
+what tasks do you do in the begining of the project:
+- review and analyze the project requirements.
+- plan and organize the knowledge transfer to the testers and self.
+- Collect the queries related to the requirements and get them resolved by the 
+buisness pesrson
+- organize and lead the kick-off meeting.
+
+Can you walk through your test planning process?
+- Scope of the required tests. Define what kind of testings are reqrd as per the reqrmnts.
+whether functional, performance or security testing is reqrd?
+- Test strategy. its unique for every project. it should be most efficient way to achieve all 
+the testing objectives of the project. define constraints related to team size, skills, test environments available....ect
+- identify the reqrd tools (automation)
+- Estimate the test effort and team (size, skills, schedule). estimation invoves coming up with
+optimized test efforts and team size that is reqrd to do testing.
+- Create the test schedule (tasks, dependies)
+- identify the training reqrmnts for testers.
+- Determining the test environment (software, hardware and networks)
+- identify the test metrics.
+- prepare the test  plan, get it reviewd and signed off by stake holders.
+- 
+- 
+
+
 
 
