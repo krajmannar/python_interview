@@ -329,6 +329,18 @@ and become owner for that test automation FW.
 and the test automation is efficent andt usefull in the testing process.
 - own and maintain the test automation suites. as more and more automation releases are tested, its important that 
 test autoamtion suite is upto date.
+- track of each assigned task and resolve issuess - reassign the tasks.
+- ensure that each member is occupied optimally
+
+How will u ensure that the testers log the good quality bug reports?
+- Review the defect repors and assign the valid defect to the relevant developer.
+- track returned defect report and assist the concerned tester
+- Ensure the resolved defects are retested.
+
+How do you motivate your team?
+- Be approachable and available to the testers
+- plan, organize and lead team meetings and ensure action in taken based on the team discussion
+- plan and organize trainin for testers.
 
 
 
